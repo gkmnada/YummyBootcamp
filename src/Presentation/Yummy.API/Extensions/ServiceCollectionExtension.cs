@@ -10,6 +10,7 @@ namespace Yummy.API.Extensions
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
             services.AddScoped<IBookingRepository, BookingRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
         }

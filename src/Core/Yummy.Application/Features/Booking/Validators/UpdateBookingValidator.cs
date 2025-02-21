@@ -3,7 +3,7 @@ using Yummy.Application.Features.Booking.Commands;
 
 namespace Yummy.Application.Features.Booking.Validators
 {
-    public class UpdateBookingValidator : AbstractValidator<UpdateBookingCommand>
+    public sealed class UpdateBookingValidator : AbstractValidator<UpdateBookingCommand>
     {
         public UpdateBookingValidator()
         {

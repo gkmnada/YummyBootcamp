@@ -4,7 +4,7 @@ using Yummy.Persistence.Context;
 
 namespace Yummy.Persistence.Repositories
 {
-    public class FeatureRepository : GenericRepository<Feature>, IFeatureRepository
+    public sealed class FeatureRepository : GenericRepository<Feature>, IFeatureRepository
     {
         public FeatureRepository(YummyContext context) : base(context)
         {

@@ -1,6 +1,6 @@
 ﻿namespace Yummy.Application.Features.Booking.Results
 {
-    public class GetBookingByIdQueryResult
+    public sealed class GetBookingByIdQueryResult
     {
         public int BookingID { get; set; }
         public string Name { get; set; } = string.Empty;

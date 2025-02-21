@@ -3,7 +3,7 @@ using Yummy.Application.Features.Booking.Results;
 
 namespace Yummy.Application.Features.Booking.Queries
 {
-    public class GetBookingByIdQuery : IRequest<GetBookingByIdQueryResult>
+    public sealed class GetBookingByIdQuery : IRequest<GetBookingByIdQueryResult>
     {
         public int BookingID { get; set; }
 

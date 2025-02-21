@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using Yummy.Application.Features.Booking.Validators;
+using Yummy.Application.Features.Category.Validators;
 
 namespace Yummy.Application.Common.Extensions
 {
@@ -17,6 +18,9 @@ namespace Yummy.Application.Common.Extensions
 
             services.AddScoped<CreateBookingValidator>();
             services.AddScoped<UpdateBookingValidator>();
+
+            services.AddScoped<CreateCategoryValidator>();
+            services.AddScoped<UpdateCategoryValidator>();
         }
     }
 }

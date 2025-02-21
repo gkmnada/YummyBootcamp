@@ -6,7 +6,7 @@ using Yummy.Application.Interfaces.Repositories;
 
 namespace Yummy.Application.Features.Booking.Handlers.Commands
 {
-    public class DeleteBookingCommandHandler : IRequestHandler<DeleteBookingCommand, BaseResponse>
+    public sealed class DeleteBookingCommandHandler : IRequestHandler<DeleteBookingCommand, BaseResponse>
     {
         private readonly IBookingRepository _bookingRepository;
         private readonly IUnitOfWork _unitOfWork;

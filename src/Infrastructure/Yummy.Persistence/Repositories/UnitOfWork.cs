@@ -3,7 +3,7 @@ using Yummy.Persistence.Context;
 
 namespace Yummy.Persistence.Repositories
 {
-    public class UnitOfWork : IUnitOfWork
+    public sealed class UnitOfWork : IUnitOfWork
     {
         private readonly YummyContext _context;
 

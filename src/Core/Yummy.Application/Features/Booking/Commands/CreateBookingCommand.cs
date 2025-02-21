@@ -3,7 +3,7 @@ using Yummy.Application.Common.Base;
 
 namespace Yummy.Application.Features.Booking.Commands
 {
-    public class CreateBookingCommand : IRequest<BaseResponse>
+    public sealed class CreateBookingCommand : IRequest<BaseResponse>
     {
         public string Name { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;

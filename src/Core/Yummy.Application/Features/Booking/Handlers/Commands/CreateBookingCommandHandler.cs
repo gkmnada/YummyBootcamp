@@ -9,7 +9,7 @@ using Yummy.Application.Interfaces.Repositories;
 
 namespace Yummy.Application.Features.Booking.Handlers.Commands
 {
-    public class CreateBookingCommandHandler : IRequestHandler<CreateBookingCommand, BaseResponse>
+    public sealed class CreateBookingCommandHandler : IRequestHandler<CreateBookingCommand, BaseResponse>
     {
         private readonly IBookingRepository _bookingRepository;
         private readonly IUnitOfWork _unitOfWork;

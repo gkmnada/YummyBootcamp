@@ -1,55 +1,55 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Yummy.Application.Features.Booking.Commands;
-using Yummy.Application.Features.Booking.Queries;
+using Yummy.Application.Features.Category.Commands;
+using Yummy.Application.Features.Category.Queries;
 
 namespace Yummy.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public sealed class BookingsController : ControllerBase
+    public sealed class CategoriesController : ControllerBase
     {
         private readonly IMediator _mediator;
 
-        public BookingsController(IMediator mediator)
+        public CategoriesController(IMediator mediator)
         {
             _mediator = mediator;
         }
 
-        [HttpPost("CreateBooking")]
-        public async Task<IActionResult> CreateBooking(CreateBookingCommand command)
+        [HttpPost("CreateCategory")]
+        public async Task<IActionResult> CreateCategory(CreateCategoryCommand command)
         {
             var response = await _mediator.Send(command);
             return Ok(response);
         }
 
-        [HttpGet("ListBookings")]
-        public async Task<IActionResult> ListBookings()
+        [HttpGet("ListCategories")]
+        public async Task<IActionResult> ListCategories()
         {
-            var query = new GetBookingQuery();
+            var query = new GetCategoryQuery();
             var response = await _mediator.Send(query);
             return Ok(response);
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetBookingById(int id)
+        public async Task<IActionResult> GetCategoryById(int id)
         {
-            var query = new GetBookingByIdQuery(id);
+            var query = new GetCategoryByIdQuery(id);
             var response = await _mediator.Send(query);
             return Ok(response);
         }
 
-        [HttpPut("UpdateBooking")]
-        public async Task<IActionResult> UpdateBooking(UpdateBookingCommand command)
+        [HttpPut("UpdateCategory")]
+        public async Task<IActionResult> UpdateCategory(UpdateCategoryCommand command)
         {
             var response = await _mediator.Send(command);
             return Ok(response);
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteBooking(int id)
+        public async Task<IActionResult> DeleteCategory(int id)
         {
-            var command = new DeleteBookingCommand(id);
+            var command = new DeleteCategoryCommand(id);
             var response = await _mediator.Send(command);
             return Ok(response);
         }

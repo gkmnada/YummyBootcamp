@@ -4,7 +4,7 @@ using Yummy.Persistence.Context;
 
 namespace Yummy.Persistence.Repositories
 {
-    public class ProductRepository : GenericRepository<Product>, IProductRepository
+    public sealed class ProductRepository : GenericRepository<Product>, IProductRepository
     {
         public ProductRepository(YummyContext context) : base(context)
         {

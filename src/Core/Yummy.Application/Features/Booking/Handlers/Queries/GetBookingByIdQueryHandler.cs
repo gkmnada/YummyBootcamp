@@ -7,7 +7,7 @@ using Yummy.Application.Interfaces.Repositories;
 
 namespace Yummy.Application.Features.Booking.Handlers.Queries
 {
-    public class GetBookingByIdQueryHandler : IRequestHandler<GetBookingByIdQuery, GetBookingByIdQueryResult>
+    public sealed class GetBookingByIdQueryHandler : IRequestHandler<GetBookingByIdQuery, GetBookingByIdQueryResult>
     {
         private readonly IBookingRepository _bookingRepository;
         private readonly IMapper _mapper;
